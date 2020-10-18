@@ -1,0 +1,209 @@
+$main: #2f4f4f;
+$bg-selection: #ff0;
+$white: #fff;
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Comic Neue", sans-serif;
+  font-size: 62.5%;
+  transition: all 0.69s ease;
+  letter-spacing: 0.032em;
+}
+
+::selection {
+  background-color: $bg-selection;
+  color: $main;
+}
+
+:-moz-selection {
+  background-color: $bg-selection;
+  color: $main;
+}
+
+.blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+
+  &__header {
+    height: 20%;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      float: left;
+      transition: 0.2s;
+      margin-right: 16px;
+      float: left;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateX(2px);
+      }
+      &:active {
+        transform: translate(2px, 2px);
+      }
+    }
+
+    &__name {
+      font-size: 2.8em;
+      color: $main;
+      padding: 8px;
+      float: left;
+      span {
+        background: $bg-selection;
+      }
+    }
+
+    &__portfolio {
+      margin-top: 6px;
+      float: right;
+    }
+  }
+  &__articles {
+    margin: 0 auto;
+    &__categories-text {
+      font-size: 2em;
+      color: $main;
+      &__category {
+        margin-left: 24px;
+      }
+    }
+    &__card-section {
+      width: 1200px;
+      &__card {
+        width: 360px;
+        height: 297px;
+        border-radius: 6px;
+        overflow: hidden;
+        -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        -webkit-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        &:hover {
+          -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+          -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+          box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+          cursor: pointer;
+        }
+        &:active {
+          transform: translateY(2px);
+          -moz-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+          -webkit-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+          box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+        }
+        img {
+          width: 360px;
+          height: 202.5px;
+        }
+        &__info {
+          width: 360px;
+          height: 20px;
+          padding: 8px;
+          padding-top: 4px;
+          &__reading-time {
+            font-size: 1.4em;
+            font-weight: 400;
+            color: $main;
+            float: left;
+          }
+          &__publish-date {
+            font-size: 1.4em;
+            font-weight: 400;
+            color: $main;
+            float: right;
+          }
+        }
+        &__title {
+          word-wrap: break-word;
+          font-size: 2.1em;
+          line-height: 1em;
+          color: $main;
+          padding: 8px;
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+.primary-button {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: $white;
+  padding: 4px 12px 4px 12px;
+  border-radius: 6px;
+  background-color: $main;
+  border: 2px solid $main;
+  transition: 0.2s;
+  -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+  -webkit-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+  box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+
+  &:hover {
+    -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    background-color: $main;
+    color: $white;
+    cursor: pointer;
+  }
+  &:active {
+    transform: translateY(2px);
+    -moz-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+    -webkit-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+    box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+  }
+}
+
+.secondary-button {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: $main;
+  padding: 4px 12px 4px 12px;
+  border-radius: 6px;
+  background-color: $white;
+  border: 2px solid $main;
+  transition: 0.2s;
+  -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+  -webkit-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+  box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+
+  &:hover {
+    -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+    background-color: $main;
+    color: $white;
+    cursor: pointer;
+  }
+  &:active {
+    transform: translateY(2px);
+    -moz-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+    -webkit-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+    box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+  }
+}
+
+.link {
+  color: $main;
+  text-decoration: underline;
+  font-weight: 400;
+
+  &:hover {
+    color: lighten($main, 12%);
+  }
+  &:active {
+    color: darken($main, 4%);
+  }
+}

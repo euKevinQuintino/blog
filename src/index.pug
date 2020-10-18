@@ -3,3 +3,20 @@ html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/n
   head
     include includes/head
   body
+    .blog
+      header.blog__header
+        img(src="img/logomark.svg" onclick="toHome()" alt="logomarca")
+        h1.blog__header__name
+          span kevin quintino
+        input.blog__header__portfolio.primary-button(type="button" value="confira meu portfolio")
+      section.blog__articles
+        p.blog__articles__categories-text artigos sobre:
+          a.blog__articles__categories-text__category.link(href="#") ux design
+          a.blog__articles__categories-text__category.link(href="#") esports
+        .blog__articles__card-section
+          .blog__articles__card-section__card
+            img.blog__articles__card-section__card__image
+            .blog__articles__card-section__card__info
+              p.blog__articles__card-section__card__info__reading-time 20 minutos de leitura
+              p.blog__articles__card-section__card__info__publish-date 30 de novembro de 2020
+            h1.blog__articles__card-section__card__title teste artigos de nós
