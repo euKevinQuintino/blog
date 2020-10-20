@@ -31,10 +31,10 @@ button {
 .blog {
   max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
+  margin-bottom: 50px;
 
   &__header {
-    height: 20%;
+    height: 108px;
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
@@ -76,15 +76,19 @@ button {
     &__categories-text {
       font-size: 2em;
       color: $main;
+      text-align: center;
+      margin-bottom: 28px;
       &__category {
         margin-left: 24px;
       }
     }
     &__card-section {
-      width: 1200px;
+      display: grid;
+      grid-row-gap: 44px;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       &__card {
         width: 360px;
-        height: 297px;
+        height: 280px;
         border-radius: 6px;
         overflow: hidden;
         -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
@@ -105,37 +109,111 @@ button {
         img {
           width: 360px;
           height: 202.5px;
+          border-bottom: 1px solid $main;
         }
         &__info {
           width: 360px;
           height: 20px;
           padding: 8px;
           padding-top: 4px;
+
           &__reading-time {
+            width: 168px;
             font-size: 1.4em;
             font-weight: 400;
             color: $main;
             float: left;
+            margin-bottom: 0;
           }
           &__publish-date {
+            width: 168px;
             font-size: 1.4em;
             font-weight: 400;
             color: $main;
             float: right;
+            margin-bottom: 0;
           }
         }
         &__title {
           word-wrap: break-word;
           font-size: 2.1em;
-          line-height: 1em;
+          line-height: 1.1em;
           color: $main;
-          padding: 8px;
-          padding-top: 4px;
+          padding: 0 8px;
+          padding-top: 0;
         }
       }
     }
   }
 }
+.footer {
+  width: 100%;
+  height: 480px;
+  background-color: $main;
+
+  &__social-media {
+    width: 256px;
+    height: 240px;
+    margin: auto;
+    text-align: center;
+
+    p {
+      width: 100%;
+      text-align: center;
+      padding-top: 160px;
+      margin-bottom: -80px;
+      font-size: 2em;
+      color: $white;
+    }
+
+    a {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.69);
+      padding: 13.5px;
+      border-radius: 50%;
+      margin-top: 108px;
+
+      &:hover {
+        border-color: rgba(255, 255, 255, 1);
+        cursor: pointer;
+        transition: 0.2s;
+      }
+    }
+
+    i {
+      color: $white !important;
+    }
+  }
+
+  &__message {
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    margin-top: 64px;
+
+    i:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+//begin bootstrap
+.tooltip-inner {
+  background-color: $white;
+  color: $main;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+  border-top-color: $white !important;
+}
+//end bootstrap
 
 .primary-button {
   font-size: 1.8em;
@@ -205,5 +283,57 @@ button {
   }
   &:active {
     color: darken($main, 4%);
+  }
+}
+
+//mobile
+@media (max-width: 767px) {
+  .blog {
+    margin: 0 auto;
+    width: 100%;
+    &__header {
+      padding: 24px;
+      padding-bottom: 0;
+      height: 100px;
+      width: 100%;
+      &__name {
+        display: none;
+      }
+    }
+    &__articles {
+      text-align: center;
+      &__card-section {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-row-gap: 32px;
+        &__card {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+//tablet
+@media (min-width: 768px) and (max-width: 1199px) {
+  .blog {
+    margin: 0 auto;
+    width: 100%;
+    &__header {
+      padding: 24px;
+      padding-bottom: 0;
+      height: 100px;
+      width: 100%;
+    }
+    &__articles {
+      text-align: center;
+      &__categories-text {
+        margin-bottom: 40px;
+      }
+      &__card-section {
+        &__card {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }
