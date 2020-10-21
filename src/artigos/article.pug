@@ -1,0 +1,184 @@
+doctype html
+html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#")
+  head
+    include ../includes/head-article
+    meta(name="keywords" content="Kevin Quintino, Kevin, Nicolas, Bueno, Quintino, Kevin Nicolas Bueno Quintino, kevinnicolasbq, knbq, ux designer, user experience designer, blog")
+    meta(name="description" content="Oi, meu nome é Kevin. Eu projeto e desenvolvo experiências de usuário satisfatórias e memoráveis. Confira meu blog...")
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content="blog - kevin quintino")
+    meta(name="twitter:description" content="Oi, meu nome é Kevin. Eu projeto e desenvolvo experiências de usuário satisfatórias e memoráveis. Confira meu blog...")
+    meta(name="twitter:image" content="https://i.imgur.com/0Z2Cyab.png")
+    meta(property="og:title" content="blog - kevin quintino")
+    meta(property="og:description" content="Oi, meu nome é Kevin. Eu projeto e desenvolvo experiências de usuário satisfatórias e memoráveis. Confira meu blog...")
+    meta(property="og:url" content="https://kevinnicolasbq.com/")
+    meta(property="og:image" content="https://i.imgur.com/0Z2Cyab.png")
+    meta(property="og:image:width" content="1200")
+    meta(property="og:image:height" content="628")
+    title blog - kevin quintino
+  body
+    .blog
+      header.blog__header
+        img(src="../img/logomark.svg" onclick="toHome()" alt="logomarca")
+        h1.blog__header__name
+          span kevin quintino
+        input.blog__header__portfolio.primary-button(type="button" value="confira meu portfolio")
+      section.blog__article-page
+        article.blog__article-page__content
+          h1 A importância e utilidade do minimapa nos jogos
+          span Publicado em #[strong 02 de setembro de 2020], por #[strong Kevin Quintino].
+          p O minimapa é um elemento que está presente na grande maioria dos jogos dos 
+          a(href='https://pt.wikipedia.org/wiki/Esporte_eletr%C3%B4nico' target='_blank' rel='noopener noreferrer')
+            em eSports
+          | , porém, a maioria dos jogadores não absorvem todas as informações que ele às exibe.
+          h2
+            strong Definição
+          | Primeiramente, precisamos definir o que é o minimapa. 
+          strong
+            | Ele é uma representação em escala reduzida de toda a área geográfica onde aquela partida se passa
+          | . Em alguns jogos ele é fixo na tela, em outros ele é exibido ao pressionar alguma tecla.
+          h2 Função
+          | Os desenvolvedores inserem minimapas no jogo com o intuito de
+          strong  guiar seus jogadores
+          |  — em especial os iniciantes — na movimentação pelo mapa, entretanto, para jogadores mais experientes, o minimapa possui diversas outras finalidades.
+          h2 Visão
+          | A principal e mais importante informação que o minimapa proporciona ao jogador, sem dúvidas, é a visão. Entretanto, visão de quê exatamente?
+          h3 De seus aliados
+          | Afinal, é essencial saber a localização dos outros jogadores de sua equipe. Com esta informação é possível tomar decisões, como por exemplo:
+          h4
+            | No 
+            em
+              a(href='https://pt.wikipedia.org/wiki/League_of_Legends' target='_blank' rel='noopener noreferrer') League of Legends
+              | :
+          ul
+            li
+              | Agressivar o 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em laner
+              |  inimigo;
+            li
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em Splitar
+              |  uma lane;
+            li
+              | Iniciar um 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em Baron Nashor
+              | , 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em Rift Herald
+              |  ou 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em Drake
+              | ;
+            li
+              | Tentar executar um 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em gank
+              | ;
+          h4
+            | No
+            em
+              a(href='https://pt.wikipedia.org/wiki/Counter-Strike:_Global_Offensive' target='_blank' rel='noopener noreferrer')  Counter-Strike: Global Offensive
+              | :
+          ul
+            li Plantar/Desarmar a bomba;
+            li
+              | “Abrir” um 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em bombsite
+              | ;
+            li
+              | Rotacionar para outra posição ou 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em bombsite
+              | ;
+            li Agressivar ou tentar flanquear a equipe inimiga;
+            li
+              | “Fazer” 
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em smokes
+              | /
+              a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+                em molotovs
+              | .
+          h3
+            | Da situação da partida/
+            a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+              em round
+          | Em alguns jogos como o 
+          a(href='https://pt.wikipedia.org/wiki/League_of_Legends' target='_blank' rel='noopener noreferrer')
+            em League of Legends
+          |  por exemplo, 
+          strong o minimapa mostra a situação da partida
+          | . Na maioria das vezes, a equipe que possui menos torres e 
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em wards
+          |  colocadas (visão em geral) está perdendo a partida. 
+          strong Porém, isso em de uma forma generalista
+          | , pois, é possível saber em quais 
+          em
+            a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer') roles
+          | /
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em lanes
+          |  a equipe está perdendo ou ganhando.
+          | Se a equipe perdeu seu inibidor da 
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em top-lane
+          | , mas, levou o inibidor da rota inferior, é sinal de que ou aconteceu uma “troca” entre as equipes, ou que o 
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em top-laner
+          |  perdeu a lane, enquanto sua 
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em bot-lane
+          |  ganhou.
+          h3 Do time adversário
+          | Uma informação implícita contida no minimapa, e que muitos jogadores não “enxergam” ela, é a do time adversário. Isto é crítico, pois 
+          strong talvez esta seja a informação mais importante que o minimapa proporciona
+          | . Por exemplo:
+          h4
+            | No
+            em
+              a(href='https://pt.wikipedia.org/wiki/League_of_Legends' target='_blank' rel='noopener noreferrer')  League of Legends
+              | :
+          | Se uma área do mapa não possui visão de sua equipe, significa — muito provavelmente — que existem jogadores inimigos naquela região (principalmente se a equipe inimiga retirou a visão que sua equipe tinha naquela área recentemente).
+          h4
+            | No 
+            em
+              a(href='https://pt.wikipedia.org/wiki/Counter-Strike:_Global_Offensive' target='_blank' rel='noopener noreferrer') Counter-Strike: Global Offensive
+              | :
+          | Se uma área do mapa possui ausência de jogadores da sua equipe, ou é uma área em que um jogador de sua equipe foi eliminado recentemente, a probabilidade de existir jogadores inimigos na região é grande.
+          | Ainda no 
+          a(href='https://pt.wikipedia.org/wiki/Counter-Strike:_Global_Offensive' target='_blank' rel='noopener noreferrer')
+            em CS:GO
+          | , os inimigos são exibidos no minimapa na forma de um círculo da cor vermelha ao serem 
+          a(href='https://segredosdosensei.com.br/glossario-dos-jogos/' target='_blank' rel='noopener noreferrer')
+            em spotados
+          |  por você ou por algum aliado.
+          h2 Importância
+          | Afinal, por ser a 
+          strong principal fonte de informação que você tem durante a partida
+          | , e pela 
+          strong informação que lhe é proporcionada por ele ser sempre verdadeira
+          | , o minimapa se torna essencial durante a partida, na maioria dos jogos que possuem minimapa, os jogadores profissionais passam muita parte do tempo da partida olhando para o minimapa, sendo extremamente raro que eles passem mais que 10 segundos sem olhar para ele.
+          h2 Próximos passos
+          | Agora que, provavelmente, consegui te convencer de que o minimapa é realmente importante, cabe a você 
+          strong adquirir o hábito de dar mais atenção ao minimapa
+          | , olhar ele mais vezes e/ou por mais tempo durante as partidas. Além de exercitar a 
+          strong interpretação das informações
+          |  explícitas e implícitas que ele exibe. Boa sorte em sua jornada, pequenx gafanhotx, see ya!
+
+  footer.footer
+    .footer__social-media
+      p confira minhas redes sociais
+      .footer__social-media__links
+        a(href="https://www.instagram.com/kevinnicolasbq/" rel="noopener" target="_blank")
+          i.footer__social-media__icon(data-toggle="tooltip" title="siga-me no instagram").fab.fa-instagram.fa-2x
+        a(href="https://twitter.com/kevinnicolasbq" rel="noopener" target="_blank")
+          i.footer__social-media__icon(data-toggle="tooltip" title="siga-me no twitter").fab.fa-twitter.fa-2x
+        a(href="https://www.linkedin.com/in/kevinnicolasbq/" rel="noopener" target="_blank")
+          i.footer__social-media__icon(data-toggle="tooltip" title="confira meu linkedin").fab.fa-linkedin-in.fa-2x
+        a(href="https://github.com/kevinnicolasbq/" rel="noopener" target="_blank" class="tooltip-color")
+          i.footer__social-media__icon(data-toggle="tooltip" title="confira meu github").fab.fa-github.fa-2x
+    .footer__message
+      p feito com #[i.fas.fa-heart(data-toggle="tooltip" title="amor" class="tooltip-color")] e #[i.fas.fa-mug-hot(data-toggle="tooltip" title="café")] por #[strong kevin quintino] #[i.far.fa-copyright(data-toggle="tooltip" title="todos os direitos reservados")] vintevinte.
