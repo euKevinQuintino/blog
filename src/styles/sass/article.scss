@@ -72,126 +72,56 @@ button {
       float: right;
     }
   }
-  //homepage
-  &__homepage {
-    margin: 0 auto;
-    &__categories-text {
-      font-size: 2em;
-      color: $main;
-      text-align: center;
-      margin-bottom: 28px;
-      &__category {
-        margin-left: 24px;
-      }
-    }
-    &__card-section {
-      display: grid;
-      grid-row-gap: 44px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      &__card {
-        width: 360px;
-        height: 280px;
-        border-radius: 6px;
-        overflow: hidden;
-        -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
-        -webkit-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
-        box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
-        &:hover {
-          -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
-          -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
-          box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
-          cursor: pointer;
-        }
-        &:active {
-          transform: translateY(2px);
-          -moz-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
-          -webkit-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
-          box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
-        }
-        img {
-          width: 360px;
-          height: 202.5px;
-          border-bottom: 1px solid $main;
-        }
-        &__info {
-          width: 360px;
-          height: 20px;
-          padding: 8px;
-          padding-top: 4px;
-
-          &__reading-time {
-            width: 168px;
-            font-size: 1.4em;
-            font-weight: 400;
-            color: $main;
-            float: left;
-            margin-bottom: 0;
-          }
-          &__publish-date {
-            width: 168px;
-            font-size: 1.4em;
-            font-weight: 400;
-            color: $main;
-            float: right;
-            margin-bottom: 0;
-          }
-        }
-        &__title {
-          word-wrap: break-word;
-          font-size: 2.1em;
-          line-height: 1.1em;
-          color: $main;
-          padding: 0 8px;
-          padding-top: 0;
-        }
-      }
-    }
-  }
-  //end homepage
   //begin article
   &__article-page {
     width: 100%;
     &__content {
       margin: 0 auto;
       max-width: 840px;
-      .title {
+      &__h1 {
         font-family: "Nunito", sans-serif;
         font-weight: 900;
+        font-size: 2.8em;
         color: $main;
         line-height: 1.2em;
       }
-      h2 {
+      &__h2 {
         font-family: "Nunito", sans-serif;
         font-weight: 600;
         line-height: 1em;
+        font-size: 2.4em;
         margin-top: 0.8em;
       }
-      h3 {
+      &__h3 {
         font-family: "Nunito", sans-serif;
         font-weight: 400;
         line-height: 1em;
+        font-size: 2.2em;
         margin-top: 0.6em;
       }
-      h4 {
+      &__h4 {
         font-family: "Nunito", sans-serif;
         font-weight: 400;
         line-height: 1em;
+        font-size: 2em;
         margin-top: 0.5em;
       }
-      span {
-        font-size: 0.8em;
+      &__span {
+        font-size: 1.4em;
         display: block;
         margin-bottom: 0.4em;
       }
-      p,
-      text {
+      &__p,
+      &__text {
         //font-family: 'Nunito', sans-serif;
         font-weight: 400;
+        font-size: 1.8em;
         color: $base-text;
         line-height: 1.8em;
       }
-      a {
+      &__a {
         color: lighten($main, 12%);
+        font-size: 1.8em;
         text-decoration: underline;
         &:hover {
           color: $main;
@@ -356,16 +286,6 @@ button {
         display: none;
       }
     }
-    &__homepage {
-      text-align: center;
-      &__card-section {
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        grid-row-gap: 32px;
-        &__card {
-          margin: 0 auto;
-        }
-      }
-    }
     &__article-page {
       &__content {
         margin: 18px;
@@ -384,17 +304,6 @@ button {
       padding-bottom: 0;
       height: 100px;
       width: 100%;
-    }
-    &__homepage {
-      text-align: center;
-      &__categories-text {
-        margin-bottom: 40px;
-      }
-      &__card-section {
-        &__card {
-          margin: 0 auto;
-        }
-      }
     }
     &__article-page {
       &__content {
