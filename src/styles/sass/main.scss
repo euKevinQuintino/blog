@@ -21,12 +21,12 @@ button {
 
 ::selection {
   background-color: $bg-selection;
-  color: $main;
+  //color: $main;
 }
 
 :-moz-selection {
   background-color: $bg-selection;
-  color: $main;
+  //color: $main;
 }
 
 .blog {
@@ -148,50 +148,127 @@ button {
     }
   }
   //end homepage
-  //begin article
+  //begin article-page
   &__article-page {
     width: 100%;
     &__content {
       margin: 0 auto;
       max-width: 840px;
-      .title {
+      h1 {
         font-family: "Nunito", sans-serif;
         font-weight: 900;
+        font-size: 4.8em;
         color: $main;
         line-height: 1.2em;
       }
       h2 {
         font-family: "Nunito", sans-serif;
-        font-weight: 600;
+        font-weight: 800;
         line-height: 1em;
+        font-size: 3.6em;
         margin-top: 0.8em;
       }
       h3 {
         font-family: "Nunito", sans-serif;
-        font-weight: 400;
+        font-weight: 800;
         line-height: 1em;
+        font-size: 2.8em;
         margin-top: 0.6em;
       }
       h4 {
         font-family: "Nunito", sans-serif;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 1em;
+        font-size: 2.4em;
         margin-top: 0.5em;
       }
-      span {
-        font-size: 0.8em;
-        display: block;
-        margin-bottom: 0.4em;
+
+      h5 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        line-height: 1em;
+        font-size: 2em;
+        margin-top: 0.5em;
       }
-      p,
+
+      h6 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        line-height: 1em;
+        font-size: 1.8em;
+        margin-top: 0.5em;
+      }
+
       text {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 300;
+        font-size: 1.4em;
+        color: $base-text;
+        float: center;
+        line-height: 1.6em;
+      }
+
+      p {
         //font-family: 'Nunito', sans-serif;
         font-weight: 400;
+        font-size: 1.8em;
         color: $base-text;
         line-height: 1.8em;
       }
       a {
-        color: lighten($main, 12%);
+        color: lighten($main, 9%);
+        text-decoration: underline;
+        &:hover {
+          color: $main;
+          transition: 0.1s;
+        }
+      }
+      li {
+        font-size: 1.8em;
+      }
+      q {
+        font-size: 1.8em;
+      }
+      blockquote {
+        font-size: 1.8em;
+        font-style: italic;
+      }
+      cite {
+        font-size: 1.8em;
+        font-style: normal;
+        font-weight: 300;
+      }
+      address {
+        font-size: 1.8em;
+      }
+      abbr {
+        font-size: 1.8em;
+      }
+      strong {
+        font-weight: 700;
+      }
+      hr {
+        margin: 12px 0;
+        border-top: 1px solid rgba(47,79,79,0.33);
+        border-radius: 8px;
+      }
+    }
+    &__share {
+      display: flex;
+      justify-content: left;
+      align-content: left;
+      width: 840px;
+      margin: 0 auto;
+      font-size: 1.8em;
+      font-weight: 700;
+
+      p {
+        margin-right: 16px;
+      }
+
+      a {
+        margin-right: 16px;
+        color: lighten($main, 9%);
         text-decoration: underline;
         &:hover {
           color: $main;
@@ -201,7 +278,7 @@ button {
     }
   }
 }
-//end article
+//end article page
 .footer {
   width: 100%;
   height: 480px;
@@ -317,7 +394,7 @@ button {
     -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
     -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
     box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
-    background-color: $main;
+    background-color: lighten($main, 50%);
     color: $white;
     cursor: pointer;
   }

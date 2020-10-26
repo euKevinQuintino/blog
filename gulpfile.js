@@ -80,8 +80,8 @@ gulp.task('run', gulp.series('sass', 'minify-css', 'index', 'articles', 'concat'
 gulp.task('watch', () => {
   gulp.watch('src/styles/sass/*.scss', gulp.series('sass'))
   gulp.watch('src/styles/css/*.css', gulp.series('minify-css'))
-  gulp.watch('src/*.pug', gulp.series('index'))
-  gulp.watch('src/artigos/*.pug', gulp.series('articles'))
+  gulp.watch('src/**/*.pug', gulp.series('index'))
+  gulp.watch('src/artigos/**/*.pug', gulp.series('articles'))
   gulp.watch('src/scripts/js/*.js', gulp.series('concat'))
   //gulp.watch('src/js/*.js', gulp.series('minifyJS'))
   gulp.watch('src/scripts/main.js', gulp.series('uglify'))

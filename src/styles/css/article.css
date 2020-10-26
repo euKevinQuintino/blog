@@ -42,10 +42,10 @@ button {
       .blog__header img:active {
         transform: translate(2px, 2px); }
     .blog__header__name {
-      font-size: 2.8em;
-      color: #2f4f4f;
       padding: 8px;
-      float: left; }
+      float: left;
+      font-size: 2.8em;
+      color: #2f4f4f; }
       .blog__header__name span {
         background: #ff0; }
     .blog__header__portfolio {
@@ -56,44 +56,58 @@ button {
     .blog__article-page__content {
       margin: 0 auto;
       max-width: 840px; }
-      .blog__article-page__content__h1 {
+      .blog__article-page__content h1 {
         font-family: "Nunito", sans-serif;
         font-weight: 900;
-        font-size: 2.8em;
+        font-size: 3.6em;
         color: #2f4f4f;
         line-height: 1.2em; }
-      .blog__article-page__content__h2 {
+      .blog__article-page__content h2 {
         font-family: "Nunito", sans-serif;
         font-weight: 600;
         line-height: 1em;
-        font-size: 2.4em;
+        font-size: 2.8em;
         margin-top: 0.8em; }
-      .blog__article-page__content__h3 {
+      .blog__article-page__content h3 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        line-height: 1em;
+        font-size: 2.4em;
+        margin-top: 0.6em; }
+      .blog__article-page__content h4 {
         font-family: "Nunito", sans-serif;
         font-weight: 400;
         line-height: 1em;
         font-size: 2.2em;
-        margin-top: 0.6em; }
-      .blog__article-page__content__h4 {
+        margin-top: 0.5em; }
+      .blog__article-page__content h5 {
         font-family: "Nunito", sans-serif;
         font-weight: 400;
         line-height: 1em;
         font-size: 2em;
         margin-top: 0.5em; }
-      .blog__article-page__content__span {
+      .blog__article-page__content h6 {
+        font-family: "Nunito", sans-serif;
+        font-weight: 400;
+        line-height: 1em;
+        font-size: 1.8em;
+        margin-top: 0.5em; }
+      .blog__article-page__content text {
+        font-weight: 400;
         font-size: 1.4em;
-        display: block;
-        margin-bottom: 0.4em; }
-      .blog__article-page__content__p, .blog__article-page__content__text {
+        color: #333;
+        float: right;
+        line-height: 1.6em; }
+      .blog__article-page__content p {
         font-weight: 400;
         font-size: 1.8em;
         color: #333;
         line-height: 1.8em; }
-      .blog__article-page__content__a {
-        color: #467575;
+      .blog__article-page__content a {
+        color: #406c6c;
         font-size: 1.8em;
         text-decoration: underline; }
-        .blog__article-page__content__a:hover {
+        .blog__article-page__content a:hover {
           color: #2f4f4f;
           transition: 0.1s; }
 
@@ -106,14 +120,14 @@ button {
     height: 240px;
     margin: auto;
     text-align: center; }
-    .footer__social-media p {
+    .footer__social-media__text {
       width: 100%;
       text-align: center;
       padding-top: 160px;
       margin-bottom: -80px;
       font-size: 2em;
       color: #fff; }
-    .footer__social-media a {
+    .footer__social-media__link {
       margin-right: 8px;
       margin-left: 8px; }
     .footer__social-media__icon {
