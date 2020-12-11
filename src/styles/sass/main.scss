@@ -1,12 +1,16 @@
 $main: #2f4f4f;
-$base-text: #333;
+$base-text: #444;
+$base-text-lighter: #555;
 $bg-selection: #ff0;
 $white: #fff;
 
-html {
+html,
+body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body,
@@ -15,7 +19,6 @@ textarea,
 button {
   font-family: "Comic Neue", sans-serif;
   font-size: 62.5%;
-  transition: all 0.69s ease;
   letter-spacing: 0.032em;
 }
 
@@ -87,10 +90,12 @@ button {
     &__card-section {
       display: grid;
       grid-row-gap: 44px;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      max-width: 1024px;
+      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
       &__card {
-        width: 360px;
-        height: 280px;
+        width: 300px;
+        height: 250px;
         border-radius: 6px;
         overflow: hidden;
         -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
@@ -100,6 +105,7 @@ button {
           -moz-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
           -webkit-box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
           box-shadow: 0px 4px 12px rgba(47, 79, 79, 0.44);
+          transition: 0.2s;
           cursor: pointer;
         }
         &:active {
@@ -107,20 +113,21 @@ button {
           -moz-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
           -webkit-box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
           box-shadow: 0.4px 1.6px 12px rgba(47, 79, 79, 0.4);
+          transition: 0.1s;
         }
         img {
-          width: 360px;
-          height: 202.5px;
+          width: 300px;
+          height: 167.75px;
           border-bottom: 1px solid $main;
         }
         &__info {
-          width: 360px;
+          width: 300px;
           height: 20px;
           padding: 8px;
           padding-top: 4px;
 
           &__reading-time {
-            width: 168px;
+            width: 140px;
             font-size: 1.4em;
             font-weight: 400;
             color: $main;
@@ -128,11 +135,11 @@ button {
             margin-bottom: 0;
           }
           &__publish-date {
-            width: 168px;
+            width: 300px;
             font-size: 1.4em;
             font-weight: 400;
             color: $main;
-            float: right;
+            text-align: center;
             margin-bottom: 0;
           }
         }
@@ -142,7 +149,7 @@ button {
           line-height: 1.1em;
           color: $main;
           padding: 0 8px;
-          padding-top: 0;
+          padding-top: 6px;
         }
       }
     }
@@ -157,7 +164,7 @@ button {
       h1 {
         font-family: "Nunito", sans-serif;
         font-weight: 900;
-        font-size: 4.8em;
+        font-size: 4.4em;
         color: $main;
         line-height: 1.2em;
       }
@@ -177,7 +184,7 @@ button {
       }
       h4 {
         font-family: "Nunito", sans-serif;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1em;
         font-size: 2.4em;
         margin-top: 0.5em;
@@ -185,7 +192,7 @@ button {
 
       h5 {
         font-family: "Nunito", sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1em;
         font-size: 2em;
         margin-top: 0.5em;
@@ -193,14 +200,14 @@ button {
 
       h6 {
         font-family: "Nunito", sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 1em;
         font-size: 1.8em;
         margin-top: 0.5em;
       }
 
       text {
-        font-family: 'Nunito', sans-serif;
+        font-family: "Nunito", sans-serif;
         font-weight: 300;
         font-size: 1.4em;
         color: $base-text;
@@ -232,11 +239,20 @@ button {
       blockquote {
         font-size: 1.8em;
         font-style: italic;
+        color: $base-text-lighter;
       }
       cite {
         font-size: 1.8em;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
+        color: $base-text-lighter;
+
+        a {
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
       }
       address {
         font-size: 1.8em;
@@ -245,12 +261,16 @@ button {
         font-size: 1.8em;
       }
       strong {
+        font-weight: 1.8em;
         font-weight: 700;
       }
       hr {
         margin: 12px 0;
-        border-top: 1px solid rgba(47,79,79,0.33);
+        border-top: 1px solid rgba(47, 79, 79, 0.33);
         border-radius: 8px;
+      }
+      br {
+        line-height: 2em;
       }
     }
     &__share {
@@ -280,8 +300,9 @@ button {
 }
 //end article page
 .footer {
+  margin-top: 44px;
   width: 100%;
-  height: 480px;
+  height: 360px;
   background-color: $main;
 
   &__social-media {
@@ -293,7 +314,7 @@ button {
     p {
       width: 100%;
       text-align: center;
-      padding-top: 160px;
+      padding-top: 104px;
       margin-bottom: -80px;
       font-size: 2em;
       color: $white;
@@ -329,7 +350,7 @@ button {
     text-align: center;
     color: rgba(255, 255, 255, 0.88);
     font-size: 14px;
-    margin-top: 64px;
+    margin-top: 4px;
 
     i:hover {
       color: rgba(255, 255, 255, 1);
@@ -436,15 +457,27 @@ button {
     &__homepage {
       text-align: center;
       &__card-section {
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        grid-row-gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-row-gap: 36px;
         &__card {
+          text-align: left;
           margin: 0 auto;
         }
       }
     }
     &__article-page {
       &__content {
+        margin: 18px;
+        margin-top: 0px;
+        word-wrap: break-word;
+        h1 {
+          font-size: 4em;
+        }
+      }
+      &__share {
+        width: 100%;
+        display: block;
+        font-size: 2em;
         margin: 18px;
       }
     }

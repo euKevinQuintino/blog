@@ -13,9 +13,9 @@ sass.compiler = require('node-sass')
 /*const minifyJS = () =>
   gulp.src('src/js/*.js')
     .pipe(terser({
-       mangle: {
-         toplevel: true
-       }
+      mangle: {
+        toplevel: true
+      }
     }))
     .on('error', function (error) {
       this.emit('end')
@@ -39,13 +39,13 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('index', () => {
+gulp.task('pug', () => {
   return gulp.src('src/*.pug')
     .pipe(pug({}))
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('articles', () => {
+gulp.task('pug-article', () => {
   return gulp.src('src/artigos/*.pug')
     .pipe(pug({}))
     .pipe(gulp.dest('dist/artigos'))
@@ -75,13 +75,13 @@ gulp.task('uglify', () => {
 //gulp.task('minifyJS', minifyJS)
 
 //
-gulp.task('run', gulp.series('sass', 'minify-css', 'index', 'articles', 'concat', 'uglify'))
+gulp.task('run', gulp.series('sass', 'minify-css', 'pug', 'pug-article', 'concat', 'uglify'))
 
 gulp.task('watch', () => {
   gulp.watch('src/styles/sass/*.scss', gulp.series('sass'))
   gulp.watch('src/styles/css/*.css', gulp.series('minify-css'))
-  gulp.watch('src/**/*.pug', gulp.series('index'))
-  gulp.watch('src/artigos/**/*.pug', gulp.series('articles'))
+  gulp.watch('src/*.pug', gulp.series('pug'))
+  gulp.watch('src/artigos/*.pug', gulp.series('pug-article'))
   gulp.watch('src/scripts/js/*.js', gulp.series('concat'))
   //gulp.watch('src/js/*.js', gulp.series('minifyJS'))
   gulp.watch('src/scripts/main.js', gulp.series('uglify'))
