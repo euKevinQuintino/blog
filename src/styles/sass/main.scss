@@ -22,6 +22,19 @@ button {
   letter-spacing: 0.032em;
 }
 
+mark {
+  background-color: $bg-selection;
+  padding: 0;
+  color: $main;
+}
+
+*:focus {
+  outline-color: lighten($main, 16%) !important;
+  outline-offset: 2px !important;
+  outline-style: dashed !important;
+  outline-width: 2px !important;
+}
+
 ::selection {
   background-color: $bg-selection;
   //color: $main;
@@ -65,9 +78,6 @@ button {
       color: $main;
       padding: 8px;
       float: left;
-      span {
-        background: $bg-selection;
-      }
     }
 
     &__portfolio {

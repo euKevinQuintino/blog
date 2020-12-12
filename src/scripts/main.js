@@ -4,8 +4,10 @@ function toStart() {
 
 function changeCategory(category) {
   if (category == "esports") {
-    console.log("esports")
+    document.querySelector(".design").style.display = "none";
+    document.querySelector(".esports").style.display = "block";
   } else if (category == "design") {
-    console.log("ux")
+    document.querySelector(".esports").style.display = "none";
+    document.querySelector(".design").style.display = "block";
   }
 }

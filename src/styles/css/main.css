@@ -14,6 +14,17 @@ button {
   font-size: 62.5%;
   letter-spacing: 0.032em; }
 
+mark {
+  background-color: #ff0;
+  padding: 0;
+  color: #2f4f4f; }
+
+*:focus {
+  outline-color: #4d8282 !important;
+  outline-offset: 2px !important;
+  outline-style: dashed !important;
+  outline-width: 2px !important; }
+
 ::selection {
   background-color: #ff0; }
 
@@ -46,8 +57,6 @@ button {
       color: #2f4f4f;
       padding: 8px;
       float: left; }
-      .blog__header__name span {
-        background: #ff0; }
     .blog__header__portfolio {
       margin-top: 6px;
       float: right; }
