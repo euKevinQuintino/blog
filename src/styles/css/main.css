@@ -224,7 +224,7 @@ button {
 
 .footer {
   margin-top: 44px;
-  width: 100%;
+  width: 100vw;
   height: 360px;
   background-color: #2f4f4f; }
   .footer__social-media {
