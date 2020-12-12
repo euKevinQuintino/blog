@@ -5,7 +5,7 @@ function toStart() {
 function changeCategory(category) {
   if (category == "esports") {
     console.log("esports")
-  } else if (category == "ux") {
+  } else if (category == "design") {
     console.log("ux")
   }
 }

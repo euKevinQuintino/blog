@@ -3,6 +3,10 @@ html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/n
   head
     include includes/head
   body
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-N8WW2TZ' height='0' width='0' style='display:none;visibility:hidden')
+    // End Google Tag Manager (noscript)
     .blog
       header.blog__header
         a(href="https://blog.kevinnicolasbq.com/")
@@ -13,34 +17,22 @@ html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/n
           input.blog__header__portfolio.primary-button(type="button" value="confira meu portfolio")
       section.blog__homepage
         p.blog__homepage__categories-text artigos sobre:
-          a.blog__homepage__categories-text__category.link(href="?=ux" onclick="changeCategory('ux')") ux design
+          a.blog__homepage__categories-text__category.link(href="?=design" onclick="changeCategory('design')") design
           a.blog__homepage__categories-text__category.link(href="?=esports" onclick="changeCategory('esports')") esports
         .blog__homepage__card-section
-          a(href="/dist/artigos/apenas-minusculas.html")
+          a(href="https://blog.kevinnicolasbq.com//artigos/apenas-minusculas.html" style="text-decoration: none;")
             .blog__homepage__card-section__card
               img(alt="").blog__homepage__card-section__card__image
               .blog__homepage__card-section__card__info
                 //p.blog__homepage__card-section__card__info__reading-time 20 minutos de leitura
-                p.blog__homepage__card-section__card__info__publish-date 30 de novembro de 2020
-              h1.blog__homepage__card-section__card__title entenda por que mudar de posição após cada eliminação
-          .blog__homepage__card-section__card
-            img.blog__homepage__card-section__card__image
-            .blog__homepage__card-section__card__info
-              //p.blog__homepage__card-section__card__info__reading-time 20 minutos de leitura
-              p.blog__homepage__card-section__card__info__publish-date 30 de novembro de 2020
-            h1.blog__homepage__card-section__card__title entenda por que mudar de posição após cada eliminação
-          .blog__homepage__card-section__card
-            img.blog__homepage__card-section__card__image
-            .blog__homepage__card-section__card__info
-              //p.blog__homepage__card-section__card__info__reading-time 20 minutos de leitura
-              p.blog__homepage__card-section__card__info__publish-date 30 de novembro de 2020
-            h1.blog__homepage__card-section__card__title entenda por que mudar de posição após cada eliminação
-          .blog__homepage__card-section__card
-            img.blog__homepage__card-section__card__image
-            .blog__homepage__card-section__card__info
-              //p.blog__homepage__card-section__card__info__reading-time 20 minutos de leitura
-              p.blog__homepage__card-section__card__info__publish-date 30 de novembro de 2020
-            h1.blog__homepage__card-section__card__title entenda por que mudar de posição após cada eliminação
+                p.blog__homepage__card-section__card__info__publish-date não publicado
+              h1.blog__homepage__card-section__card__title apenas minúsculas (lowercase-only)
+          a(href="https://blog.kevinnicolasbq.com/artigos/minimapa-nos-jogos.html" style="text-decoration: none;")
+            .blog__homepage__card-section__card
+              img.blog__homepage__card-section__card__image
+              .blog__homepage__card-section__card__info
+                p.blog__homepage__card-section__card__info__publish-date 02 de fevereiro de 2020
+              h1.blog__homepage__card-section__card__title Aprenda a utilizar melhor o minimapa nos jogos
     footer.footer
       .footer__social-media
         p confira minhas redes sociais
