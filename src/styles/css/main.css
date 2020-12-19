@@ -260,6 +260,7 @@ mark {
       margin-top: 108px; }
       .footer__social-media__icon:hover {
         border-color: white;
+        background-color: #3a6262;
         cursor: pointer;
         transition: 0.2s; }
     .footer__social-media i {
