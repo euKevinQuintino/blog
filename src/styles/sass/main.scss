@@ -1,7 +1,7 @@
 $main: #2f4f4f;
 $base-text: #444;
 $base-text-lighter: #555;
-$bg-selection: #ff0;
+$link-alternative: #ff0;
 $white: #fff;
 
 html,
@@ -23,7 +23,7 @@ button {
 }
 
 mark {
-  background-color: $bg-selection;
+  background-color: $link-alternative;
   padding: 0;
   color: $main;
 }
@@ -36,12 +36,12 @@ mark {
 }
 
 ::selection {
-  background-color: $bg-selection;
+  background-color: $link-alternative;
   //color: $main;
 }
 
 :-moz-selection {
-  background-color: $bg-selection;
+  background-color: $link-alternative;
   //color: $main;
 }
 
@@ -232,14 +232,6 @@ mark {
         color: $base-text;
         line-height: 1.8em;
       }
-      a {
-        color: lighten($main, 9%);
-        text-decoration: underline;
-        &:hover {
-          color: $main;
-          transition: 0.1s;
-        }
-      }
       li {
         font-size: 1.8em;
       }
@@ -260,7 +252,6 @@ mark {
         a {
           &:hover {
             cursor: pointer;
-            text-decoration: underline;
           }
         }
       }
@@ -298,12 +289,6 @@ mark {
 
       a {
         margin-right: 16px;
-        color: lighten($main, 9%);
-        text-decoration: underline;
-        &:hover {
-          color: $main;
-          transition: 0.1s;
-        }
       }
     }
   }
@@ -439,15 +424,44 @@ mark {
 }
 
 .link {
-  color: $main;
-  text-decoration: underline;
+  color: inherit;
+  border-bottom: 2px solid $main;
+  border-radius: 2px;
+  text-decoration: none;
   font-weight: 400;
+  cursor: pointer;
 
   &:hover {
-    color: lighten($main, 12%);
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 3px solid $main;
   }
   &:active {
-    color: darken($main, 4%);
+    text-decoration: none;
+    color: $main;
+    border-bottom: 3px solid $main;
+    transition: .1s;
+  }
+}
+
+.link-alternative {
+  color: inherit;
+  border-bottom: 2px solid $link-alternative;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 3px solid $link-alternative;
+  }
+  &:active {
+    text-decoration: none;
+    color: $link-alternative;
+    border-bottom: 3px solid $link-alternative;
+    transition: .1s;
   }
 }
 
