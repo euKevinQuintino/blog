@@ -180,11 +180,25 @@ mark {
         line-height: 1.8em; }
       .blog__article-page__content li {
         font-size: 1.8em; }
+      .blog__article-page__content iframe {
+        width: 640px;
+        height: 360px;
+        display: block;
+        margin: 0 auto; }
+      .blog__article-page__content figcaption {
+        font-size: 1.6em;
+        text-align: center;
+        padding: 6px;
+        color: #555; }
       .blog__article-page__content q {
         font-size: 1.8em; }
       .blog__article-page__content blockquote {
         font-size: 1.8em;
+        line-height: 1.8em;
         font-style: italic;
+        border-left: 4px solid #2f4f4f;
+        border-radius: 4px;
+        padding-left: 16px;
         color: #555; }
       .blog__article-page__content cite {
         font-size: 1.8em;
@@ -205,7 +219,7 @@ mark {
         border-top: 1px solid rgba(47, 79, 79, 0.33);
         border-radius: 8px; }
       .blog__article-page__content br {
-        line-height: 2em; }
+        line-height: 2.4em; }
     .blog__article-page__share {
       display: flex;
       justify-content: left;
@@ -324,7 +338,7 @@ mark {
   border-bottom: 2px solid #2f4f4f;
   border-radius: 2px;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: inher;
   cursor: pointer; }
   .link:hover {
     color: inherit;
@@ -378,6 +392,9 @@ mark {
       word-wrap: break-word; }
       .blog__article-page__content h1 {
         font-size: 4em; }
+      .blog__article-page__content iframe {
+        width: 320px;
+        height: 180px; }
     .blog__article-page__share {
       width: 100%;
       display: block;

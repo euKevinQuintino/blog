@@ -235,12 +235,28 @@ mark {
       li {
         font-size: 1.8em;
       }
+      iframe {
+        width: 640px;
+        height: 360px;
+        display: block;
+        margin: 0 auto;
+      }
+      figcaption {
+        font-size: 1.6em;
+        text-align: center;
+        padding: 6px;
+        color: $base-text-lighter;
+      }
       q {
         font-size: 1.8em;
       }
       blockquote {
         font-size: 1.8em;
+        line-height: 1.8em;
         font-style: italic;
+        border-left: 4px solid $main;
+        border-radius: 4px;
+        padding-left: 16px;
         color: $base-text-lighter;
       }
       cite {
@@ -271,7 +287,7 @@ mark {
         border-radius: 8px;
       }
       br {
-        line-height: 2em;
+        line-height: 2.4em;
       }
     }
     &__share {
@@ -428,7 +444,7 @@ mark {
   border-bottom: 2px solid $main;
   border-radius: 2px;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: inher;
   cursor: pointer;
 
   &:hover {
@@ -497,6 +513,10 @@ mark {
         word-wrap: break-word;
         h1 {
           font-size: 4em;
+        }
+        iframe {
+          width: 320px;
+          height: 180px;
         }
       }
       &__share {
