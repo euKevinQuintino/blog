@@ -220,6 +220,16 @@ mark {
         border-radius: 8px; }
       .blog__article-page__content br {
         line-height: 2.4em; }
+      .blog__article-page__content ul {
+        color: #444; }
+      .blog__article-page__content img {
+        display: block;
+        margin: 0 auto;
+        padding: 8px;
+        padding-bottom: 0; }
+      .blog__article-page__content figcaption {
+        margin-top: -8px;
+        padding-top: 0; }
     .blog__article-page__share {
       display: flex;
       justify-content: left;

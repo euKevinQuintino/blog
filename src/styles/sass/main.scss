@@ -289,6 +289,19 @@ mark {
       br {
         line-height: 2.4em;
       }
+      ul {
+        color: $base-text;
+      }
+      img { 
+        display: block;
+        margin: 0 auto;
+        padding: 8px;
+        padding-bottom: 0;
+      }
+      figcaption {
+        margin-top: -8px;
+        padding-top: 0;
+      }
     }
     &__share {
       display: flex;
