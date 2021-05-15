@@ -1,5 +1,5 @@
 doctype html
-html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#")
+html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml")
   head
     include includes/head
   body
@@ -7,16 +7,24 @@ html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/n
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-N8WW2TZ' height='0' width='0' style='display:none;visibility:hidden')
     .blog
       header.blog__header
-        a(href="https://blog.kevinnicolasbq.com/")
-          img(src="img/logomark.svg" alt="logomarca kevinnicolasbq")
-        h1.blog__header__name #[mark kevin quintino]
-        a(href="https://kevinnicolasbq.com/")
-          input.blog__header__portfolio.primary-button(type="button" value="confira meu portfolio" tabindex="-1")
+        a(href="." style="float: left;" data-toggle="tooltip" title="minha logo (clique para recarregar a página)" aria-hidden="true")
+          img(src="img/logo.svg" alt="" aria-hidden="true")
+        h1(data-toggle="tooltip" title="este é meu nome :v").blog__header__name kevin quintino
+        div(style="display: block; float: right;")
+          a(href="https://kevinnicolasbq.com/" data-toggle="tooltip" title="visite meu portfolio" role="presentation")
+            input.primary-button(type="button" value="confira meu porfolio" tabindex="-1" role="button")
       section.blog__homepage
-        //p.blog__homepage__categories-text artigos sobre:
-          a.blog__homepage__categories-text__category.link(href="javascript:;" onclick="changeCategory('design');return false;") design
-          a.blog__homepage__categories-text__category.link(href="javascript:;" onclick="changeCategory('esports');return false;") esports
-        .blog__homepage__card-section
+        div(style="display: flex;align-content: center; justify-content: center;width: 480px; margin: 56px auto;")
+          div
+            p.blog__homepage__categories-text artigos sobre:
+          .blog__homepage__categories-text__category-selection
+            .blog__homepage__categories-text__category-selection__subject
+              .blog__homepage__categories-text__category-selection__subject-first#todos(href="javascript:;" onclick="changeCategory('all');return false;") todos
+            .blog__homepage__categories-text__category-selection__subject
+              .blog__homepage__categories-text__category-selection__subject-middle#gameDesign(href="javascript:;" onclick="changeCategory('game-design');return false;") game design
+            .blog__homepage__categories-text__category-selection__subject
+              .blog__homepage__categories-text__category-selection__subject-last#esports(href="javascript:;" onclick="changeCategory('esports');return false;") esports
+        .blog__homepage__card-section(style="margin-top: 56px;")
           a.esports(href="https://blog.kevinnicolasbq.com/artigos/prevendo-os-adversarios.html" style="text-decoration: none;")
             .blog__homepage__card-section__card
               img.blog__homepage__card-section__card__image(src="img/featured-images/aprenda-a-prever-os-adversarios-nos-jogos-kevin-quintino-kevinnicolasbq-small.png" alt="rabisco semelhante à uma espiral de caderno à esquerda, com o título do artigo à direita e com a sentença 'prever os adversários' destacada por um marca texto")
@@ -73,15 +81,38 @@ html(lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/n
               h1.blog__homepage__card-section__card__title aprenda a utilizar melhor o minimapa dos jogos
     footer.footer
       .footer__social-media
-        p confira minhas redes sociais
+        h2 confira minhas redes sociais
         .footer__social-media__links
-          a(href="https://www.instagram.com/kevinnicolasbq/" rel="noopener" target="_blank")
-            i.footer__social-media__icon(data-toggle="tooltip" title="siga-me no instagram").fab.fa-instagram.fa-2x
-          a(href="https://twitter.com/kevinnicolasbq" rel="noopener" target="_blank")
-            i.footer__social-media__icon(data-toggle="tooltip" title="siga-me no twitter").fab.fa-twitter.fa-2x
-          a(href="https://www.linkedin.com/in/kevinnicolasbq/" rel="noopener" target="_blank")
-            i.footer__social-media__icon(data-toggle="tooltip" title="confira meu linkedin").fab.fa-linkedin-in.fa-2x
-          a(href="https://github.com/kevinnicolasbq/" rel="noopener" target="_blank" class="tooltip-color")
-            i.footer__social-media__icon(data-toggle="tooltip" title="confira meu github").fab.fa-github.fa-2x
+          a(href="https://www.instagram.com/kevinnicolasbq/" rel="noopener noreferrer" target="_blank" aria-label="acessar meu instagram")
+            i.footer__social-media__links__icon(data-toggle="tooltip" title="siga-me no instagram" aria-hidden="true").fab.fa-instagram.fa-2x
+          a(href="https://twitter.com/kevinnicolasbq" rel="noopener noreferrer" target="_blank" aria-label="acessar meu twitter")
+            i.footer__social-media__links__icon(data-toggle="tooltip" title="siga-me no twitter" aria-hidden="true").fab.fa-twitter.fa-2x
+          a(href="https://www.linkedin.com/in/kevinnicolasbq/" rel="noopener noreferrer" target="_blank" aria-label="acessar meu linkedin")
+            i.footer__social-media__links__icon(data-toggle="tooltip" title="conecte-se comigo no linkedin" aria-hidden="true").fab.fa-linkedin-in.fa-2x
+          a(href="https://github.com/kevinnicolasbq/" rel="noopener noreferrer" target="_blank" class="tooltip-color" aria-label="acessar meu github")
+            i.footer__social-media__links__icon(data-toggle="tooltip" title="confira meu github" aria-hidden="true").fab.fa-github.fa-2x
       .footer__message
-        p feito com #[i.fas.fa-heart(data-toggle="tooltip" title="amor" class="tooltip-color")] e #[i.fas.fa-mug-hot(data-toggle="tooltip" title="café")] por #[strong kevin quintino] #[i.far.fa-copyright(data-toggle="tooltip" title="todos os direitos reservados")] vintevinte.
+        p feito com #[i.fas.fa-heart(data-toggle="tooltip" title="amor" class="tooltip-color" aria-label="amor")] e #[i.fas.fa-mug-hot(data-toggle="tooltip" title="café")] por #[strong kevin quintino] #[i.far.fa-copyright(data-toggle="tooltip" title="todos os direitos reservados" aria-hidden="true")] 2021.
+    script.
+      $(".fa-chevron-down").removeClass("link");
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    script.
+      function changeCategory(category) {
+        if (category == "esports") {
+          document.querySelector(".game-design").style.display = "none";
+          document.querySelector(".esports").style.display = "block";
+          document.getElementById("esports").style.backgroundColor = "#2f4f4f";
+          document.getElementById("esports").style.color = "#fff";
+          document.getElementById("gameDesign").style.backgroundColor = "#fff";
+          document.getElementById("gameDesign").style.color = "#2f4f4f";
+        } else if (category == "game-design") {
+          document.querySelector(".esports").style.display = "none";
+          document.querySelector(".game-design").style.display = "block";
+          document.getElementById("gameDesign").style.backgroundColor = "#2f4f4f";
+          document.getElementById("gameDesign").style.color = "#fff";
+          document.getElementById("esports").style.backgroundColor = "#fff";
+          document.getElementById("esports").style.color = "#2f4f4f";
+        }
+      }

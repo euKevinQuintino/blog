@@ -1,7 +1,7 @@
 $main: #2f4f4f;
 $base-text: #444;
 $base-text-lighter: #555;
-$link-alternative: #ff0;
+$link-alternative: #ffe383;
 $white: #fff;
 
 html,
@@ -19,6 +19,7 @@ textarea,
 button {
   font-family: "Comic Neue", sans-serif;
   font-size: 62.5%;
+  transition: all 0.69s ease;
   letter-spacing: 0.032em;
 }
 
@@ -29,39 +30,42 @@ mark {
 }
 
 *:focus {
+  outline: none;
+}
+
+*:focus-visible {
   outline-color: lighten($main, 16%) !important;
   outline-offset: 2px !important;
   outline-style: dashed !important;
   outline-width: 2px !important;
+  transition: 0.1s;
 }
 
 ::selection {
   background-color: $link-alternative;
-  //color: $main;
+  color: $main;
 }
 
 :-moz-selection {
   background-color: $link-alternative;
-  //color: $main;
+  color: $main;
 }
 
 .blog {
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 50px;
 
   &__header {
-    height: 108px;
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    height: 80px;
+    padding-top: 32px;
+    padding-left: 0px;
+    padding-right: 0px;
 
     img {
       width: 48px;
       height: 48px;
       float: left;
       transition: 0.2s;
-      margin-right: 16px;
       float: left;
 
       &:hover {
@@ -69,7 +73,7 @@ mark {
         transform: translateX(2px);
       }
       &:active {
-        transform: translate(2px, 2px);
+        transform: translate(1px, 1px);
       }
     }
 
@@ -78,6 +82,7 @@ mark {
       color: $main;
       padding: 8px;
       float: left;
+      margin-left: 16px;
     }
 
     &__portfolio {
@@ -92,9 +97,66 @@ mark {
       font-size: 2em;
       color: $main;
       text-align: center;
-      margin-bottom: 28px;
-      &__category {
+      line-height:  43px;
+      &__category-selection {
         margin-left: 24px;
+        height: 43px;
+        width: fit-content;
+        border-radius: 6px;
+        -moz-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        -webkit-box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        box-shadow: 0px 2px 8px rgba(47, 79, 79, 0.44);
+        &__subject {
+          display: inline-block;
+          &-first {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            font-size: 1.8em;
+            color: $main;
+            padding: 8px 16px;
+            border-right: 1px solid $main;
+            &:hover {
+              background-color: lighten($main, 64%);
+              cursor: pointer;
+              transition: 0.2s;
+            }
+            &:active {
+              background-color: lighten($main, 56%);
+              transition: 0.1s;
+            }
+          }
+          &-middle {
+            font-size: 1.8em;
+            color: $main;
+            padding: 8px 16px;
+            border-right: 1px solid $main;
+            &:hover {
+              background-color: lighten($main, 64%);
+              cursor: pointer;
+              transition: 0.2s;
+            }
+            &:active {
+              background-color: lighten($main, 56%);
+              transition: 0.1s;
+            }
+          }
+          &-last {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            font-size: 1.8em;
+            color: $main;
+            padding: 8px 16px;
+            &:hover {
+              background-color: lighten($main, 64%);
+              cursor: pointer;
+              transition: 0.2s;
+            }
+            &:active {
+              background-color: lighten($main, 56%);
+              transition: 0.1s;
+            }
+          }
+        }
       }
     }
     &__card-section {
@@ -104,6 +166,7 @@ mark {
       margin: 0 auto;
       grid-template-columns: repeat(auto-fit, minmax(322px, 1fr));
       &__card {
+        margin: 0 auto;
         width: 300px;
         height: 250px;
         border-radius: 6px;
@@ -296,7 +359,7 @@ mark {
       ul {
         color: $base-text;
       }
-      img { 
+      img {
         display: block;
         margin: 0 auto;
         padding: 8px;
@@ -336,41 +399,45 @@ mark {
   &__social-media {
     width: 256px;
     height: 240px;
+    padding-top: 104px;
     margin: auto;
     text-align: center;
 
-    p {
+    h2 {
       width: 100%;
       text-align: center;
-      padding-top: 104px;
-      margin-bottom: -80px;
+      margin-bottom: 0;
       font-size: 2em;
       color: $white;
     }
 
-    a {
-      margin-right: 8px;
-      margin-left: 8px;
-    }
+    &__links {
+      padding-top: 0;
+      margin-top: 28px;
 
-    &__icon {
-      width: 48px;
-      height: 48px;
-      border: 1px solid rgba(255, 255, 255, 0.69);
-      padding: 13.5px;
-      border-radius: 50%;
-      margin-top: 108px;
-
-      &:hover {
-        border-color: rgba(255, 255, 255, 1);
-        background-color: lighten($main, 6%);
-        cursor: pointer;
-        transition: 0.2s;
+      a {
+        margin-right: 8px;
+        margin-left: 8px;
       }
-    }
 
-    i {
-      color: $white !important;
+      &__icon {
+        width: 48px;
+        height: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.69);
+        padding: 13.5px;
+        border-radius: 50%;
+
+        &:hover {
+          border-color: rgba(255, 255, 255, 1);
+          background-color: lighten($main, 6%);
+          cursor: pointer;
+          transition: 0.2s;
+        }
+      }
+
+      i {
+        color: $white !important;
+      }
     }
   }
 
@@ -473,7 +540,7 @@ mark {
     text-decoration: none;
     color: $main;
     border-bottom: 3px solid $main;
-    transition: .1s;
+    transition: 0.1s;
   }
 }
 
@@ -494,7 +561,7 @@ mark {
     text-decoration: none;
     color: $link-alternative;
     border-bottom: 3px solid $link-alternative;
-    transition: .1s;
+    transition: 0.1s;
   }
 }
 
